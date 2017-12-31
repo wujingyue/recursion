@@ -28,7 +28,10 @@ public class FibonacciRecursionSimulator {
 			StackFrame topFrame = callStack.peek();
 			switch (topFrame.ip) {
 			case FIRST_FIBO:
-				if (topFrame.n == 0 || topFrame.n == 1) {
+				if (topFrame.n == 0) {
+					topFrame.ip = InstructionPointer.END;
+					topFrame.accumulator = 0;
+				} else if (topFrame.n == 1) {
 					topFrame.ip = InstructionPointer.END;
 					topFrame.accumulator = 1;
 				} else {

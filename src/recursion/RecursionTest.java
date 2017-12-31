@@ -8,7 +8,7 @@ class RecursionTest {
 
 	@Test
 	void testSimulatedFibonacci() {
-		assertEquals(8, FibonacciRecursionSimulator.fibonacci(5));
+		assertEquals(Fibonacci.compute(5), FibonacciRecursionSimulator.fibonacci(5));
 	}
 
 }
